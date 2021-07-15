@@ -1,0 +1,25 @@
+#slider {
+    width: 384px;
+    height: 128px;
+    border: 5px solid black;
+    margin: 50px auto;
+    overflow: hidden; /*картинки. которые вылазят за блок, скрыты, видно только 3 картинки*/
+}
+
+#polosa {
+    /*background:pink;*/
+    width: 896px; /*128 * 7 картинок*/
+    position: relative; 
+    left: 0;
+    transition: all ease 1s; /*замедляет эффект*/
+}
+
+#polosa img {
+    float: left;
+}
+
+#polosa::after {  /*вставляем некоторое содержимое после элемента*/
+    content:"";
+    display: block; /*переводит строчные эл в блочные*/
+    clear: both;
+}
